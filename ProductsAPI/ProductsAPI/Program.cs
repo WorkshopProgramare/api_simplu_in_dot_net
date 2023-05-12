@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<ProductDbContext>(opt => opt.UseSqlServer("Server=mssql_container;Database=Products;TrustServerCertificate=True;User Id=sa;Password=AccLearning!2023;"));
+builder.Services.AddDbContext<ProductDbContext>(opt => opt.UseSqlServer("Server=mssql_container;Database=Products;TrustServerCertificate=True;User Id=sa;Password=Workshop!2023;"));
 builder.Services.AddAutoMapper(new[] { typeof(MapperProfile) });
 
 var app = builder.Build();
