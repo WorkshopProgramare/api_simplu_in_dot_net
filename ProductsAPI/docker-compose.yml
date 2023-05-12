@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  productsapi:
+    image: ${DOCKER_REGISTRY-}productsapi
+    build:
+      context: .
+      dockerfile: ProductsAPI/Dockerfile
+  mssql_container:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: Workshop!2023
+    ports:
+      - 1434:1433
